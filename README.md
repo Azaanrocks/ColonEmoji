@@ -26,13 +26,24 @@ nothing you type ever leaves your browser.
 Temporary add-ons are removed when Firefox restarts — the permanently signed
 version is coming to Firefox Add-ons (AMO).
 
-**Chrome / Edge / Brave**
+**Chrome / Edge / Brave — Windows, no developer mode**
 
-1. Download `colonemoji-1.0.0.zip` and extract it anywhere.
-2. Open `chrome://extensions` (Edge: `edge://extensions`) → enable **Developer mode**.
-3. Click **Load unpacked** and select the extracted folder.
+Stock Chrome refuses to install extensions from anywhere but its Web Store, and
+it also ignores `--load-extension` these days — the one supported no-store route
+is a policy install, which needs **one double-click, never developer mode**:
 
-A Chrome Web Store listing is planned — after that, one click installs it everywhere.
+1. Go to **[Releases](https://github.com/Azaanrocks/ColonEmoji/releases)** and
+   download **`install.reg`**.
+2. Double-click it → *Yes* → *Yes* (UAC asks for admin **once** — this is not
+   developer mode, nothing gets enabled).
+3. Chrome (restart it) silently downloads the extension from the release and
+   installs it. It also **auto-updates** itself from the same place forever.
+
+To remove it: download **`uninstall.reg`** from the release, double-click, restart Chrome.
+
+> Fallback for tinkerers/macOS/Linux: extract the zip, open `chrome://extensions`,
+> enable *Developer mode*, *Load unpacked*. Nothing about the extension requires
+> developer mode — only that manual fallback does.
 
 ## Privacy
 
